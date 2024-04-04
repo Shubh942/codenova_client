@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { Helmet } from "react-helmet";
 
-const ENDPOINT = "http://localhost:5000/";
+const ENDPOINT = "https://codenova-server.onrender.com/";
 var socket, selectedChatCompare;
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -58,7 +58,7 @@ const Chat = () => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "http://localhost:5000/api/v1/message",
+          "https://codenova-server.onrender.com/api/v1/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

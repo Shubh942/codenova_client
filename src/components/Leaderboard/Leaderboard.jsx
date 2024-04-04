@@ -12,7 +12,7 @@ const Leaderboard = () => {
       },
     };
     const { data } = await axios.get(
-      `http://localhost:5000/api/v1/ctf/leaderboard`,
+      `https://codenova-server.onrender.com/api/v1/ctf/leaderboard`,
       config
     );
     console.log(data);

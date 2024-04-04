@@ -25,7 +25,7 @@ const AccessChat = ({ messages, setMessages }) => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:5000/api/v1/message/${selectedChat._id}`,
+        `https://codenova-server.onrender.com/api/v1/message/${selectedChat._id}`,
         config
       );
       setMessages(data);

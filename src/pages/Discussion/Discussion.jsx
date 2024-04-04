@@ -32,7 +32,7 @@ const Discussion = () => {
           },
         };
         const { data } = await axios.post(
-          `http://localhost:5000/api/v1/chat/create-discussion`,
+          `https://codenova-server.onrender.com/api/v1/chat/create-discussion`,
           {
             chatName: discussionName,
             discription: discription,
@@ -70,7 +70,7 @@ const Discussion = () => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:5000/api/v1/chat/discussion`,
+        `https://codenova-server.onrender.com/api/v1/chat/discussion`,
         config
       );
       setDiscussion(data);

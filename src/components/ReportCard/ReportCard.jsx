@@ -17,7 +17,7 @@ const ReportCard = ({ item }) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/report/resolve-discussion",
+        "https://codenova-server.onrender.com/api/v1/report/resolve-discussion",
         { reportId: item._id },
         config
       );
@@ -39,7 +39,7 @@ const ReportCard = ({ item }) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/chat",
+        "https://codenova-server.onrender.com/api/v1/chat",
         { userId: item.sender._id },
         config
       );

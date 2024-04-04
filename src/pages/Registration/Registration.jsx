@@ -31,7 +31,7 @@ const Registration = () => {
       console.log(college);
       // console.log("---------------------------------");
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/users/register",
+        "https://codenova-server.onrender.com/api/v1/users/register",
         {
           college: college,
           githubHandle: githubHandle,
