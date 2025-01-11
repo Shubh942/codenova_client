@@ -13,6 +13,7 @@ import Error from "./pages/Error/Error";
 import FutureScope from "./pages/Error/FutureScope";
 import Reports from "./pages/Reports/Reports";
 import Home from "./pages/Home/Home";
+import CustomerSupport from "./components/CustomerSupport/CustomerSupport";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       {/* </BrowserRouter> */}
+      <CustomerSupport />
     </div>
   );
 }

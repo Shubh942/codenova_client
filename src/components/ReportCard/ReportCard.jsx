@@ -4,9 +4,12 @@ import { useNavigate } from "react-router-dom";
 import "./ReportCard.css";
 
 const ReportCard = ({ item }) => {
+  const [done, setDone] = useState(false);
+  const [load, setLoad] = useState(false);
   const navigate = useNavigate();
   const [color, setColor] = useState(item.isResolved ? item.isResolved : false);
   const handleClick = async () => {
+    setLoad(true);
     try {
       const config = {
         headers: {
@@ -22,6 +25,8 @@ const ReportCard = ({ item }) => {
         config
       );
       //   console.log(data);
+      setDone(true);
+      setLoad(false);
 
       console.log(data);
     } catch (err) {
@@ -68,11 +73,11 @@ const ReportCard = ({ item }) => {
           Chat with the person
         </button>
         <div className="resolved">
-          {color ? (
+          {color | done ? (
             <button className="btn-cta-green">Solved</button>
           ) : (
             <button className="btn-cta-blue" onClick={handleClick}>
-              ReSolve
+              {load ? "..." : "ReSolve"}
             </button>
           )}
           {/* <button className="btn-cta-blue">Resolved</button> */}
