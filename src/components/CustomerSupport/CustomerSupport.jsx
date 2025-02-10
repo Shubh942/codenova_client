@@ -10,7 +10,7 @@ const CustomerSupport = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log(JSON.parse(localStorage.getItem("userInfo")).data.user._id);
+  // console.log(JSON.parse(localStorage.getItem("userInfo")).data.user._id);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
